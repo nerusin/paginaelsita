@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Para Ti ❤️</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(120deg, #ff758c, #ff7eb3);
+      color: white;
+      overflow-x: hidden;
+    }
+
+    section {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 40px 20px;
+      animation: fadeIn 1.5s ease;
+    }
+
+    h1 {
+      font-size: 2.4em;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.1em;
+      max-width: 700px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .media {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas fijas */
+  gap: 25px;
+  max-width: 1100px;   /* antes 800px */
+  width: 100%;
+  margin-top: 30px;
+}
+
+
+    .media img, .media video {
+      width: 100%;
+      border-radius: 15px;
+      object-fit: cover;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    }
+
+    .btn {
+      margin-top: 30px;
+      padding: 15px 30px;
+      background: white;
+      color: #ff4d6d;
+      border: none;
+      border-radius: 30px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    }
+
+    .gift {
+      display: none;
+      background: rgba(255,255,255,0.15);
+      padding: 30px;
+      border-radius: 20px;
+      margin-top: 30px;
+      animation: pop 0.6s ease;
+    }
+
+    .code {
+      font-size: 1.4em;
+      letter-spacing: 3px;
+      margin-top: 10px;
+      background: white;
+      color: #ff4d6d;
+      padding: 10px 20px;
+      border-radius: 10px;
+      display: inline-block;
+    }
+
+    .heart {
+      position: fixed;
+      top: -10px;
+      font-size: 20px;
+      animation: fall linear infinite;
+      opacity: 0.8;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes pop {
+      from { transform: scale(0.7); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    @keyframes fall {
+      to { transform: translateY(110vh); }
+    }
+  </style>
+</head>
+<body>
+
+<section>
+  <h1>For you, Elsita 💝</h1>
+  <p>
+    I love you so much, my love. I hope to see you soon and we can give each other all the kisses we want❤️
+  </p>
+
+  <div class="media">
+    <img src="4a7cdf74-c5b6-4407-b953-4ec987fc9d03 (1).JPG" alt="Foto juntos" style="height: 500px;">
+    <video src="IMG_5753.MOV" controls></video>
+    <img src="IMG_5968.jpeg" alt="Foto juntos">
+  </div>
+</section>
+
+<section>
+  <h1>A part of me 💫</h1>
+  <p>
+    You haven't been in my life for very long, but in the time you have been, you've shown me how wonderful you are. You're the best, and you deserve everything! 
+    You're someone who supports me a lot, loves me a lot, and is always there for me. I definitely want to be with you for the rest of my life, and I hope you feel the same way. 
+    We might not spend today together, but we'll see each other soon, and just knowing I'll be with someone as special as you in the future is enough for me. I love u ❤️
+  </p>
+
+  <div class="media">
+    <img src="9adff761-b2fa-488a-b429-7ad5ae9b61e3 (1).JPG" alt="Recuerdo bonito">
+    <video src="Elsita.MOV" controls></video>
+    <img src="9fe7fbdb-cb37-4ece-8896-fd79f4737067 (1).JPG" alt="Recuerdo bonito">
+  </div>
+</section>
+
+<section>
+  <h1>for the biggest butt in the world 🥵💌</h1>
+  <p>
+    Remember that soon you're going to devour me whole, and the same goes for me hehe 😉.
+    I'm going to eat that whole giant ass of yoursssss RAWRRRR😋
+  </p>
+
+  <div class="media">
+    <img src="IMG_5863.jpeg" alt="Amor" style="height: 400px;">
+    <img src="IMG_5901.jpeg" alt="Amor">
+    <img src="IMG_5885.jpeg" alt="Amor">
+  </div>
+</section>
+
+<section>
+  <h1>For the best person in the world 🥰</h1>
+  <p>
+    A little bird told me you need more storage on your phone... Maybe this will help...🤔
+  </p>
+
+  <button class="btn" onclick="mostrarRegalo()">View your gift 💖</button>
+
+  <div class="gift" id="regalo">
+    <h2>Your Apple card 💕</h2>
+    <p>150SEK 😉</p>
+    <div class="code">XVKRVNC9TNM7CM2T</div>
+    <p style="margin-top:15px;">You deserve it, it's not much, but it's enough 🫶</p>
+  </div>
+</section>
+
+<script>
+  function mostrarRegalo() {
+    document.getElementById("regalo").style.display = "block";
+  }
+
+  function crearCorazon() {
+    const heart = document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerHTML = "❤️";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.animationDuration = (3 + Math.random() * 5) + "s";
+    document.body.appendChild(heart);
+
+    setTimeout(() => heart.remove(), 8000);
+  }
+
+  setInterval(crearCorazon, 500);
+</script>
+
+</body>
+</html>
